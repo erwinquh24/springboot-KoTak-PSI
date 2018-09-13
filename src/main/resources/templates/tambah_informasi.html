@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>KoTAK</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/> 
+		    <!-- MetisMenu CSS -->
+		    <link rel="stylesheet" th:href="@{/css/metisMenu.min.css}"/> 
+		<!--     Custom CSS -->
+		    <link rel="stylesheet" th:href="@{/css/sb-admin-2.css}"/> 
+		<!--     Morris Charts CSS -->
+		    <link rel="stylesheet" th:href="@{/css/morris.css}"/> 
+		    <link rel="stylesheet" th:href="@{/css/style2.css}"/> 
+		<!--     Custom Fonts -->
+		    <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}"/> 
+		    <link rel="stylesheet" th:href="@{/css/fontawesome.min.css}"/> 
+			 
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+ <!-- ===========================================================Navigation Samping ============================================================================================= -->
+        
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Logo Letakkan di sini</a>
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+                   	 <li class="dropdown">
+                        <a class="dropdown-toggle"  th:href="@{/register}">Buat Akun Baru</a>
+                         <ul class="dropdown-menu dropdown-lr animated flipInX" role="menu">
+<!--                             <div class="col-lg-12"> -->
+<!--                                 <div class="text-center"><h3><b>Register</b></h3></div> -->
+<!--                             </div> -->
+                         </ul>
+                     </li>
+                     
+	                <li class="dropdown">
+	                    <a href="http://phpoll.com/login" class="dropdown-toggle" data-toggle="dropdown">Masuk Log<span class="caret"></span></a>
+	                        <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu">
+<!-- 	                            <div class="col-lg-12"> -->
+<!-- 	                                <div class="text-center"><h3><b>Log In</b></h3></div> -->
+<!-- 	                            </div> -->
+	                        </ul>
+	                </li>
+                
+                
+            </ul>
+            <!-- /.navbar-top-links -->
+
+<!-- =============================================================================================================================== -->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search..."/>
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="flot.html">Flot Charts</a>
+                                </li>
+                                <li>
+                                    <a href="morris.html">Morris.js Charts</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
+                        </li>
+                        <li>
+                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="panels-wells.html">Panels and Wells</a>
+                                </li>
+                                <li>
+                                    <a href="buttons.html">Buttons</a>
+                                </li>
+                                <li>
+                                    <a href="notifications.html">Notifications</a>
+                                </li>
+                                <li>
+                                    <a href="typography.html">Typography</a>
+                                </li>
+                                <li>
+                                    <a href="icons.html"> Icons</a>
+                                </li>
+                                <li>
+                                    <a href="grid.html">Grid</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-users" aria-hidden="true"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#">Second Level Item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Second Level Item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Third Level <span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                    </ul>
+                                    <!-- /.nav-third-level -->
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Tambahkan Informasi Anda</h1>
+                </div>
+                
+                <div class="col-lg-12">
+                  <div class="main-login main-center">
+                    <div class="col-xs-12 ">
+                     
+                     <form class="form-horizontal" th:object="${artikel}" th:action="@{/kotak/tambah_informasi}" method="post">
+                    	<input type="hidden" th:field="*{artikel_id}"/> <!--    combine with merge on controller -->
+						<fieldset>
+						
+<!-- 						Form Name -->
+<!-- 						<legend>Form Name</legend> -->
+						
+						<!-- Text input-->
+						<div class="form-group">
+						  <label class="col-md-3 control-label" for="textinput">Judul</label>  
+						  <div class="col-md-6">
+						  <div class="input-group">
+						   <span class="input-group-addon"><i class="fa fa-address-book"></i></span> 
+						  <input id="textinput" name="textinput" placeholder="Judul informasi anda" class="form-control input-md" type="text" th:field="*{judul}"/>
+						    
+						  </div>
+						  </div>
+						</div>
+						
+						<!-- Textarea -->
+						<div class="form-group">
+						  <label class="col-md-3 control-label" for="textarea">Isi Informasi *</label>
+						 <div class="col-md-6">                     
+						    <textarea class="form-control" id="textarea" name="textarea" th:field="*{konten}"></textarea>
+						  </div>
+						</div>
+						
+						<!-- Text input-->
+						<div class="form-group">
+						  <label class="col-md-3 control-label" for="textinput">Lokasi</label>  
+						  <div class="col-md-6">
+						   <div class="input-group">
+						   <span class="input-group-addon"><i class="fa fa-location-arrow"></i></span> 
+						  <input id="textinput" name="textinput" placeholder="Lokasi terkait informasi anda" class="form-control input-md" type="text" th:field="*{lokasi}"/>
+						    
+						  </div>
+						  </div>
+						</div>
+						
+				
+						
+						<!-- Text input-->
+						<div class="form-group"> 
+						  <label class="col-md-3 control-label">Suku</label>
+						    <div class="col-md-4 selectContainer">
+						    <div class="input-group">
+						        <span class="input-group-addon"><i class="fa fa-list"></i></span>
+						    <select name="state" class="form-control selectpicker" >
+						      <option value=" " style="font-style: italic;" >Pilih Jenis Suku Batak :</option>
+						      <option>Batak Toba</option>
+						      <option>Batak Karo</option>
+						      <option>Batak Pakpak</option>
+						      <option>Batak Simalungun</option>
+						      <option>Batak Mandailing</option>
+						      <option>Batak Angkola</option>
+						    </select>
+						  </div>
+						</div>
+						</div>
+
+						<!-- Text input-->
+						
+						<div class="form-group">
+					        <label class="col-md-3 control-label" for="textinput">Gambar</label>
+						       <div class="col-md-6">
+						        <div class="input-group">
+						            <span class="input-group-btn">
+						                <span class="btn btn-default btn-file"><i class="fa fa-search"></i>
+						                    <input type="file" id="imgInp" />
+						                </span>
+						            </span>
+						            <input type="text" class="form-control" readonly=""/>
+						        </div>
+						       </div>
+					        <img id='img-upload'/>
+					    </div>
+						
+						<!-- Text input-->
+						<div class="form-group">
+						  <label class="col-md-3 control-label" for="textinput">Referensi</label>  
+						  <div class="col-md-6">
+<!-- 						  <button class="btn btn-default" data-toggle="modal" data-target="#myModal"> -->
+<!-- 							   <i class="fa fa-book fa-2x" aria-hidden="true"></i> -->
+<!-- 						  </button> -->
+							  <button type="button" data-toggle="modal"
+							   data-target="#myModal"> <i class="fa fa-book fa-2x" aria-hidden="true"></i>
+							  </button>
+						    
+						  </div>
+						</div>
+						
+                 <!-- Modal -->
+						<div class="container">
+						<!-- Modal -->
+						<div class="modal fade" id="myModal" role="dialog" aria-hidden="true"
+							style="display: none;">
+							<div class="modal-dialog">
+				
+								<!-- Modal content-->
+								<div class="modal-content">
+									<div class="modal-header">
+										<h4 class="modal-title">Tambah Referensi Informasi Anda</h4>
+									</div>
+									<div class="modal-body">
+				
+										<form class="form-horizontal">
+											<fieldset>
+											
+					<!-- 						Form Name -->
+					<!-- 						<legend>Form Name</legend> -->
+											
+											<!-- Text input-->
+											<div class="form-group"> 
+											  <label class="col-md-3 control-label">Jenis Sumber</label>
+											    <div class="col-md-4 selectContainer">
+											    <div class="input-group">
+											        <span class="input-group-addon"><i class="fa fa-list"></i></span>
+											    <select name="state" class="form-control selectpicker" >
+											      <option value=" " style="font-style: italic;" >Jenis Sumber Anda :</option>
+											      <option th:each="k : ${kategori_sumber}" th:value="${k.kategori_id}" th:text="${k.jenis_kategori}">Jurnal</option>
+<!-- 											      <option>Cerita Rakyat</option> -->
+<!-- 											      <option>Artikel</option> -->
+<!-- 											      <option>Website</option> -->
+<!-- 											      <option>Buku</option> -->
+<!-- 											      <option>dll</option> -->
+											    </select>
+											  </div>
+											</div>
+											</div>
+									
+											
+											<!-- Text input-->
+											<div class="form-group">
+											  <label class="col-md-3 control-label" for="textinput">Pengarang </label>  
+											  <div class="col-md-6">
+											  <div class="input-group">
+											   <span class="input-group-addon"><i class="fa fa-address-book"></i></span> 
+											  <input id="textinput" name="textinput" placeholder="judul informasi anda" class="form-control input-md" type="text"/>
+											    
+											  </div>
+											  </div>
+											</div>
+											
+											<!-- Text input-->
+											<div class="form-group">
+											  <label class="col-md-3 control-label" for="textinput">Judul </label>  
+											  <div class="col-md-6">
+											  <div class="input-group">
+											   <span class="input-group-addon"><i class="fa fa-address-book"></i></span> 
+											  <input id="textinput" name="textinput" placeholder="judul informasi anda" class="form-control input-md" type="text"/>
+											    
+											  </div>
+											  </div>
+											</div>
+											
+											<!-- Text input-->
+											<div class="form-group">
+											  <label class="col-md-3 control-label" for="textinput">Tahun </label>  
+											  <div class="col-md-6">
+											  <div class="input-group">
+											   <span class="input-group-addon"><i class="fa fa-address-book"></i></span> 
+											  <input id="textinput" name="textinput" placeholder="judul informasi anda" class="form-control input-md" type="text"/>
+											    
+											  </div>
+											  </div>
+											</div>
+											
+											<!-- Text input-->
+											<div class="form-group">
+											  <label class="col-md-3 control-label" for="textinput">Kota </label>  
+											  <div class="col-md-6">
+											  <div class="input-group">
+											   <span class="input-group-addon"><i class="fa fa-address-book"></i></span> 
+											  <input id="textinput" name="textinput" placeholder="judul informasi anda" class="form-control input-md" type="text"/>
+											    
+											  </div>
+											  </div>
+											</div>
+											
+											<!-- Text input-->
+											<div class="form-group">
+											  <label class="col-md-3 control-label" for="textinput">URL </label>  
+											  <div class="col-md-6">
+											  <div class="input-group">
+											   <span class="input-group-addon"><i class="fa fa-address-book"></i></span> 
+											  <input id="textinput" name="textinput" placeholder="judul informasi anda" class="form-control input-md" type="text"/>
+											    
+											  </div>
+											  </div>
+											</div>
+											
+											
+											<button type="submit" class="btn btn-success" style="margin-left: 26%; width: 48%;">Ok</button>
+										
+											
+										</fieldset>
+									</form>
+									
+									
+									</div>
+									<div class="modal-footer">
+										<i class="fa fa-window-close  fa-2x" aria-hidden="true" data-dismiss="modal"></i>
+									</div>
+								</div>
+				
+							</div>
+						</div>
+				
+					</div>
+					
+<!-- ============================================================================================================================================= -->
+						<!-- Text input-->
+						<div class="form-group">
+						  <label class="col-md-3 control-label" for="textinput">Keyword</label>  
+						  <div class="col-md-6">
+						  <div class="input-group">
+						   <span class="input-group-addon"><i class="fa fa-hand-o-right"></i></span> 
+						  <input id="textinput" name="textinput" placeholder="Kata kunci untuk cari cepat informasi anda" class="form-control input-md" type="text"/>
+						    
+						  </div>
+						  </div>
+						</div>
+						
+						<!-- Button (Double) -->
+						<div class="form-group">
+						  <label class="col-md-5 control-label" for="anmelden"></label>
+						  <div class="col-md-4" >
+						    <button id="anmelden" name="anmelden" class="btn btn-warning" style="margin-left: -24ex; width: 100px;">Batal</button>
+						    <button id="reset" name="reset" class="btn btn-success" style="width: 200px; margin-left: 185px;">Submit</button>
+						  </div>
+						</div>
+						
+						
+						</fieldset>
+						</form>
+                     </div>
+                  </div>
+               
+                
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+        </div>
+        <!-- ======================================================================================================================== -->
+        <!-- /#page-wrapper -->
+
+    </div>
+
+<!-- ==== jQuery -->
+
+     <script th:src="@{/js/jquery-1.11.1.min.js}"></script>
+	 <script th:src="@{/js/bootstrap.min.js}"></script>
+	 <script th:src="@{/js/jquery.min.js}"></script>
+<!-- ==== -->
+
+</body>
+
+</html>

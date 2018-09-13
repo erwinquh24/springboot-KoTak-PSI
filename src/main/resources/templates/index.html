@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>KoTAK</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
+<!--     Bootstrap Core CSS -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/> 
+<!--     MetisMenu CSS -->
+    <link rel="stylesheet" th:href="@{/css/metisMenu.min.css}"/> 
+<!--     Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/sb-admin-2.css}"/> 
+<!--     Morris Charts CSS -->
+    <link rel="stylesheet" th:href="@{/css/morris.css}"/> 
+<!--     Custom Fonts -->
+    <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}"/> 
+    <link rel="stylesheet" th:href="@{/css/fontawesome.min.css}"/> 
+   
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Logo Letakkan di sini</a>
+            </div>
+            <!-- /.navbar-header =================================================================================================-->
+
+            <ul class="nav navbar-top-links navbar-right">
+                   	 <li class="dropdown">
+                        <a class="dropdown-toggle"  th:href="@{/register}">Buat Akun Baru<span class="caret"></span></a>
+                         <ul class="dropdown-menu dropdown-lr animated flipInX" role="menu"></ul>
+                     </li>
+                     
+	                <li class="dropdown">
+	                     <a class="dropdown-toggle"  th:href="@{/login}">Masuk Log<span class="caret"></span></a>
+	                        <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu"></ul>
+	                </li>
+	                
+           </ul>
+            <!-- /.navbar-top-links -->
+
+<!-- =============================================================================================================================== -->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search..."/>
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="flot.html">Flot Charts</a>
+                                </li>
+                                <li>
+                                    <a href="morris.html">Morris.js Charts</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
+                        </li>
+                        <li>
+                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="panels-wells.html">Panels and Wells</a>
+                                </li>
+                                <li>
+                                    <a href="buttons.html">Buttons</a>
+                                </li>
+                                <li>
+                                    <a href="notifications.html">Notifications</a>
+                                </li>
+                                <li>
+                                    <a href="typography.html">Typography</a>
+                                </li>
+                                <li>
+                                    <a href="icons.html"> Icons</a>
+                                </li>
+                                <li>
+                                    <a href="grid.html">Grid</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-users" aria-hidden="true"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#">Second Level Item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Second Level Item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Third Level <span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Selamat Datang di Korpus Kebudayaan Batak</h1>
+                 
+                    
+                </div>
+                <!-- /.col-lg-12 -->
+<!--====================================================ISI ARTIKEL ===============================================================  -->
+                <div class="col-lg-12">
+                	<div class="container">
+<!--                 		 <div class="row"> -->
+					        <div class="col-md-9" style="margin-left: -30px;">
+					              <div class="panel panel-default">
+					               <div class="panel-body">
+<!-- ========================================================Transaksi ke database ==================================================-->
+					               <div th:each="a :${artikel}" th:if="${not #lists.isEmpty(artikel)}">
+					               
+					                  <h3 th:text="${a.judul}"> </h3>
+					                   
+					                    <div class="info-meta">
+					                        <ul class="list-inline">
+					                            <li class="fa fa-calendar"> Diedit Pada: <i  th:text="${a.created_at}"></i></li>
+					                            <li class="fa fa-heart-o"><span  th:text="${a.suka}"></span></li>
+												<li class="fa fa-user"> Diposting oleh : <span th:text=" ${a.lokasi}"></span></li>
+					                            <li class="pull-right">Category : Education</li>
+					                        </ul>
+					                    </div>
+					                  
+					                    <div class = "media">
+					                       <a class = "pull-left" href = "#">
+					                          <img class = "media-object " src = "images/education.jpg" width="100%" height="200px" />
+					                       </a>
+					                   
+					                       <div class = "media-body">
+					                 
+					                 
+					                       	 <div class="readmore">
+					                       	 	<p th:text="${a.konten}"> </p>
+					                       	 	<!-- <a th:href="/dsa/${a.artikel_id}"></a>  -->
+						                     </div>
+						                     
+						                 
+						                   </div>
+					                    </div>
+					                    
+					                    <hr/>
+					                  
+					               </div>
+					               
+					               </div>
+<!--  ===========================================================batas ============================================================-->
+					            </div>
+					         </div>
+					      
+					        <div id="wrapper">  
+					        <div class="col-md-2" style="margin-left: -15px; width: 2.4in;">
+					            <div class="panel panel-default">
+					               <div class="panel-heading"><h4 class="text-center">Latest News</h4></div>
+					               <div class="panel-body">
+					                    <div class="recent">
+					                        <a href="#"><img class="img-responsive" src="images/sport.jpg" alt="" /></a>                
+					                        <div class="info-meta">
+					                            <ul class="list-inline">
+					                                <li><i class="fa fa-clock-o"></i> Jan 5, 2016 </li>
+					                                <li><i class="fa fa-eye"></i>21k</li>
+					                                <li><i class="fa fa-heart-o"></i>372</li>
+					                            </ul>
+					                        </div>
+					                        <h4>
+					                            <a href="">Pertandingan Basket NBA berlangsung sangat sengit</a>
+					                        </h4>
+					                    </div>
+					                    
+					                    <div class="recent">
+					                        <a href="#"><img class="img-responsive" src="images/technology.jpg" alt="" /></a>                           
+					                        <div class="info-meta">
+					                            <ul class="list-inline">
+					                                <li><i class="fa fa-clock-o"></i> Jan 5, 2016</li>
+					                                <li><i class="fa fa-eye"></i>21k</li>
+					                                <li><i class="fa fa-heart-o"></i>372</li>
+					                            </ul>
+					                        </div>
+					                        <h4 class="entry-title">
+					                            <a href="">Tip dan Trik dalam memilih laptop untuk penyuka game</a>
+					                        </h4>
+					                    </div><!--recent-->
+					                </div>
+					                
+					                 
+					            </div>  
+					            
+					            
+					            
+					            <div class="col-md-3">
+					            	
+					            	<a href="kotak/tambah_informasi"><button type="button" class="btn btn-success btn-lg btn-responsive" style="margin-left: -15px; width: 2.1in; ">Tambah Informasi</button></a>
+					            </div>
+					            
+					             
+					            
+					            
+					        </div>   
+					        </div>   
+					         
+
+					    	
+                	</div>
+                
+                </div>
+                
+            </div>
+            <!-- /.row -->
+           
+            <!-- /.row -->
+        </div>
+        <!-- ======================================================================================================================== -->
+        <!-- /#page-wrapper -->
+
+    </div>
+    
+    
+    <!--FOOTER-->
+    <div class="footer-bottom">
+        <div class="container-fluid text-center">
+            <p>Copyright &copy; 2017,  DTC. Developed by <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">Kelompok 5 Projek PSI</a></p>
+        </div>
+    </div>           
+    
+    <!--=================================================More Info========================================================= -->
+    <script th:src="@{/js/jquery-3.1.1.min.js}"></script>
+    <script th:src="@{/js/jquery.expander.js}"></script>
+    
+ <!--    <script type="text/javascript">
+		$(document).ready(function() {
+			$(".readmore").expander({
+				slicePoint : 300,
+				expandText : 'More',
+				userCollapseText : 'Less'
+			});
+		});
+	</script> -->
+	<!-- ================================================================================== -->
+    
+    
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+<!--     <script th:src="@{/js/jquery.min.js}"></script> -->
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <script th:src="@{/js/metisMenu.min.js}"></script>
+    <script th:src="@{/js/raphael.min.js}"></script>
+    <script th:src="@{/js/morris.min.js}"></script>
+    <script th:src="@{/js/morris-data.js}"></script>
+    
+<!--     Custom Theme JavaScript -->
+    <script th:src="@{/js/sb-admin-2.js}"></script>
+<!--     <script th:src="@{/js/jquery-1.11.1.min.js}"></script> -->
+
+</body>
+
+</html>
